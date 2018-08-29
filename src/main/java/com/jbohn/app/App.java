@@ -1,11 +1,15 @@
 package com.jbohn.app;
 
-import java.time.LocalDateTime;
+import com.jbohn.app.algorithm.*;
 
 public class App 
 {
+    private static Fibonacci fibonacci = new Fibonacci();
+
     public static void main( String[] args )
     {
-        System.out.println( "Welcome to Jbohn World!" );
+        int n = 10;
+        int fibonacciResult = fibonacci.fibonacciRecursion(n);
+        System.out.println( "Fibonacci to " + n + " is " + fibonacciResult );
     }
 }
